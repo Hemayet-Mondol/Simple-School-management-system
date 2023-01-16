@@ -1,0 +1,23 @@
+﻿@model School_Management_System.Models.student
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="name"></label>
+        <label>@Html.DisplayFor(st=>st.name)</label>
+
+    </div>
+    <div class="form-group">
+        <label asp-for="address"></label>
+        <label>@Html.DisplayFor(st=>st.address)</label>
+    </div>
+    <div class="form-group">
+        <label asp-for="roll"></label>
+        <label>@Html.DisplayNameFor(st=>st.roll)</label>
+    </div>
+    <div class="form-group">
+        <label asp-for="clas"></label>
+        <label>@Html.DisplayFor(st=>st.clas)</label>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Delete</button>
+</form>

@@ -1,0 +1,33 @@
+﻿@model School_Management_System.Models.faculty
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(ft=>ft.Id)</th>
+            <th scope="col">@Html.DisplayNameFor(ft=>ft.name)</th>
+            <th scope="col">@Html.DisplayNameFor(ft=>ft.address)</th>
+            <th scope="col">@Html.DisplayNameFor(ft=>ft.department)</th>
+            <th scope="col">@Html.DisplayNameFor(ft=>ft.salary)</th>
+            <th scope="col">@Html.DisplayNameFor(ft=>ft.mobile)</th>
+            <th scope="col">WHAT ACTION WANT TO TAKE</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <th scope="row">@Html.DisplayFor(fc=>fc.Id)</th>
+            <td>@Html.DisplayFor(fc=>fc.name)</td>
+            <td>@Html.DisplayFor(fc=>fc.address)</td>
+            <td>@Html.DisplayFor(fc=>fc.department)</td>
+            <td>@Html.DisplayFor(fc=>fc.salary)</td>
+            <th>@Html.DisplayNameFor(fc=>fc.mobile)</th>
+
+            <td>
+                <a asp-action="Index" class="btn btn-info">Back to Font View</a>
+            </td>
+        </tr>
+
+
+
+
+    </tbody>
+</table>

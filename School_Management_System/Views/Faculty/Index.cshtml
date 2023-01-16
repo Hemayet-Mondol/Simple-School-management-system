@@ -1,0 +1,39 @@
+﻿@model IEnumerable<School_Management_System.Models.faculty>
+<a asp-action="Create" class="btn btn-info">Create</a>
+<table class="table table-dark" ">
+    <thead>
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(faculty=>faculty.Id)</th>
+            <th scope="col">@Html.DisplayNameFor(faculty=>faculty.name)</th>
+            <th scope="col">@Html.DisplayNameFor(faculty=>faculty.address)</th>
+            <th scope="col">@Html.DisplayNameFor(faculty=>faculty.department)</th>
+            <th scope="col">@Html.DisplayNameFor(faculty=>faculty.salary)</th>
+            <th scope="col">@Html.DisplayNameFor(faculty=>faculty.mobile)</th>
+            <th scope="col">WHAT ACTION WANT TO TAKE</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var ft in Model )
+        {
+        <tr>
+            
+            <th scope="row">@Html.DisplayFor(fc=>ft.Id)</th>
+            <td>@Html.DisplayFor(fc=>ft.name)</td>
+            <td>@Html.DisplayFor(fc=>ft.address)</td>
+            <td>@Html.DisplayFor(fc=>ft.department)</td>
+            <td>@Html.DisplayFor(fc=>ft.salary)</td>
+            <td>@Html.DisplayFor(fc=>ft.mobile)</td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@ft.Id" class="btn btn-info">Edit</a> &nbsp;&nbsp;
+                <a asp-action="Details" asp-route-id="@ft.Id" class="btn btn-info">Details</a>&nbsp;&nbsp;
+                <a asp-action="Delete" asp-route-id="@ft.Id" class="btn btn-info">Delete</a>
+            </td>
+        </tr>
+
+        }
+
+
+    </tbody>
+</table>

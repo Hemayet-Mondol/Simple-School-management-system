@@ -1,0 +1,31 @@
+﻿@model School_Management_System.Models.student
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">@Html.DisplayNameFor(student=>student.Id)</th>
+            <th scope="col">@Html.DisplayNameFor(student=>student.name)</th>
+            <th scope="col">@Html.DisplayNameFor(student=>student.address)</th>
+            <th scope="col">@Html.DisplayNameFor(student=>student.roll)</th>
+            <th scope="col">@Html.DisplayNameFor(student=>student.clas)</th>
+            <th scope="col">WHAT ACTION WANT TO TAKE</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <th scope="row">@Html.DisplayFor(m=>m.Id)</th>
+            <td>@Html.DisplayFor(m=>m.name)</td>
+            <td>@Html.DisplayFor(m=>m.address)</td>
+            <td>@Html.DisplayFor(m=>m.roll)</td>
+            <td>@Html.DisplayFor(m=>m.clas)</td>
+           
+            <td>
+                <a asp-action="Index" class="btn btn-info">Back to Font View</a>
+            </td>
+        </tr>
+
+
+
+
+    </tbody>
+</table>
